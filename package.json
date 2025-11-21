@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "generateModels": "tsc --project scripts/tsconfig.json && node scripts/build/generateModels.mjs",
-    "dev": "next dev",
+    "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
     "dev:https": "next dev --experimental-https",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
@@ -43,6 +43,7 @@
     "autoprefixer": "^10.4.20",
     "babel-jest": "^29.7.0",
     "concurrently": "^8.2.2",
+    "cross-env": "^10.1.0",
     "dotenv": "^16.4.7",
     "eslint": "^9.19.0",
     "eslint-config-next": "15.1.6",
